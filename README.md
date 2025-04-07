@@ -1,36 +1,130 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# PixelPrompt ✨
 
-## Getting Started
+## AI-Powered Image Generation Web Application
 
-First, run the development server:
+PixelPrompt is a modern web application built with Next.js and React that allows users to generate unique AI-created images by providing simple text prompts. It leverages the power of the Nebius AI Studio API to transform your textual descriptions into stunning visual creations.
+
+## 🚀 Features
+
+*   **Text-to-Image Generation:** Turn your ideas into images with simple text prompts.
+*   **Adjustable Image Parameters:** Fine-tune aspects of the generated image (if applicable via API).
+*   **Image Gallery:** Browse previously generated images.
+*   **Responsive Design:** Looks great on desktops, tablets, and mobile devices.
+*   **User-Friendly Interface:** Easy and intuitive to use.
+
+## 🛠️ Getting Started
+
+Follow these steps to get a local copy up and running.
+
+### Prerequisites
+
+*   Node.js (Check Next.js 15.2 documentation for specific version requirements, likely >= 18.x)
+*   npm or yarn
+*   A Nebius AI Studio account and API key (see [API Configuration](#-api-configuration))
+
+### Installation
+
+1.  **Clone the repository:**
+    ```bash
+    git clone https://github.com/yourusername/pixel-prompt.git
+    ```
+    *(Replace `yourusername` with the actual GitHub username if applicable)*
+
+2.  **Navigate to the project directory:**
+    ```bash
+    cd pixel-prompt
+    ```
+
+3.  **Install dependencies:**
+    ```bash
+    npm install
+    # or
+    # yarn install
+    ```
+
+4.  **Set up environment variables:**
+    Create a `.env.local` file in the root of the project and add your Nebius API key:
+    ```env
+    NEBIUS_API_KEY=your_api_key_here
+    ```
+
+## 🏃 Usage
+
+### Development Mode
+
+To run the application in development mode with hot-reloading:
 
 ```bash
 npm run dev
 # or
-yarn dev
+# yarn dev
+
+
+Open http://localhost:3000 in your browser to view the application.
+
+Production Mode
+
+To build and run the application optimized for production:
+
+Build the application:
+
+npm run build
 # or
-pnpm dev
+# yarn build
+IGNORE_WHEN_COPYING_START
+content_copy
+download
+Use code with caution.
+Bash
+IGNORE_WHEN_COPYING_END
+
+Start the production server:
+
+npm run start
 # or
-bun dev
-```
+# yarn start
+IGNORE_WHEN_COPYING_START
+content_copy
+download
+Use code with caution.
+Bash
+IGNORE_WHEN_COPYING_END
+🔑 API Configuration
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+PixelPrompt relies on the Nebius AI Studio API for its core image generation functionality.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Sign up for an account at Nebius AI Studio.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Navigate to your account dashboard and generate an API key.
 
-## Learn More
+Add this API key to your .env.local file as the NEBIUS_API_KEY variable (see Installation).
 
-To learn more about Next.js, take a look at the following resources:
+The application interacts with the following API endpoint for image generation:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+https://api.studio.nebius.com/v1/images/generations
+IGNORE_WHEN_COPYING_START
+content_copy
+download
+Use code with caution.
+IGNORE_WHEN_COPYING_END
+💻 Technologies Used
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Next.js 15.2
 
-## Deploy on Vercel
+React 19
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Tailwind CSS 4
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+TypeScript 5
+
+Axios (for API requests)
+
+📄 License
+
+Distributed under the MIT License. See LICENSE file for more information.
+
+IGNORE_WHEN_COPYING_START
+content_copy
+download
+Use code with caution.
+IGNORE_WHEN_COPYING_END
