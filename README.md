@@ -6,9 +6,8 @@ PixelPrompt is a modern web application built with Next.js and React that allows
 
 ## 🚀 Features
 
-*   **Text-to-Image Generation:** Turn your ideas into images with simple text prompts.
-*   **Adjustable Image Parameters:** Fine-tune aspects of the generated image (if applicable via API).
-*   **Image Gallery:** Browse previously generated images.
+*   **Imagine to Image**  Image from text Input.
+*   **Model Selection:** Switch between different underlying generation models or fine-tuned versions.
 *   **Responsive Design:** Looks great on desktops, tablets, and mobile devices.
 *   **User-Friendly Interface:** Easy and intuitive to use.
 
@@ -18,17 +17,17 @@ Follow these steps to get a local copy up and running.
 
 ### Prerequisites
 
-*   Node.js (Check Next.js 15.2 documentation for specific version requirements, likely >= 18.x)
-*   npm or yarn
+*   Node.js 
+*   npm 
 *   A Nebius AI Studio account and API key (see [API Configuration](#-api-configuration))
 
 ### Installation
 
 1.  **Clone the repository:**
     ```bash
-    git clone https://github.com/yourusername/pixel-prompt.git
+    git clone https://github.com/Samit-codes/pixel-prompt.git
     ```
-    *(Replace `yourusername` with the actual GitHub username if applicable)*
+    
 
 2.  **Navigate to the project directory:**
     ```bash
@@ -38,86 +37,25 @@ Follow these steps to get a local copy up and running.
 3.  **Install dependencies:**
     ```bash
     npm install
-    # or
-    # yarn install
     ```
-
 4.  **Set up environment variables:**
     Create a `.env.local` file in the root of the project and add your Nebius API key:
     ```env
     NEBIUS_API_KEY=your_api_key_here
     ```
 
-## 🏃 Usage
+🏃 Usage
 
-### Development Mode
+Development: npm run dev (View at http://localhost:3000)
 
-To run the application in development mode with hot-reloading:
+Production: npm run build then npm run start
 
-```bash
-npm run dev
-# or
-# yarn dev
-
-
-Open http://localhost:3000 in your browser to view the application.
-
-Production Mode
-
-To build and run the application optimized for production:
-
-Build the application:
-
-npm run build
-# or
-# yarn build
-IGNORE_WHEN_COPYING_START
-content_copy
-download
-Use code with caution.
-Bash
-IGNORE_WHEN_COPYING_END
-
-Start the production server:
-
-npm run start
-# or
-# yarn start
-IGNORE_WHEN_COPYING_START
-content_copy
-download
-Use code with caution.
-Bash
-IGNORE_WHEN_COPYING_END
 🔑 API Configuration
 
-PixelPrompt relies on the Nebius AI Studio API for its core image generation functionality.
+Get an API key from Nebius AI Studio.
 
-Sign up for an account at Nebius AI Studio.
-
-Navigate to your account dashboard and generate an API key.
-
-Add this API key to your .env.local file as the NEBIUS_API_KEY variable (see Installation).
-
-The application interacts with the following API endpoint for image generation:
-
-https://api.studio.nebius.com/v1/images/generations
-IGNORE_WHEN_COPYING_START
-content_copy
-download
-Use code with caution.
-IGNORE_WHEN_COPYING_END
-💻 Technologies Used
-
-Next.js 15.2
-
-React 19
-
-Tailwind CSS 4
-
-TypeScript 5
-
-Axios (for API requests)
+Add it to .env.local as NEBIUS_API_KEY.
+(Uses Nebius API: https://api.studio.nebius.com/v1/images/generations)
 
 📄 License
 
